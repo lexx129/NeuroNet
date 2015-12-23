@@ -1,11 +1,11 @@
-package lab1;
+package lab2;
 
 public class Neuron {
     private int[] w;
     private int[] p;
     private int b;
 
-    public Neuron(int[] w, int[]p, int b) {
+    public Neuron(int[] w, int[] p, int b) {
         this.w = w;
         this.p = p;
         this.b = b;
@@ -22,5 +22,11 @@ public class Neuron {
             System.out.println("1");
         else
             System.out.println("0");
+    }
+    public void configure(int e){
+        for (int i = 0; i < w.length; i++) {
+            this.w[i] += e * p[i];
+            this.b += e;
+        }
     }
 }

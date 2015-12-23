@@ -1,4 +1,4 @@
-package lab1;
+package lab2;
 
 import java.io.*;
 
@@ -7,7 +7,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        bw.write("Р’РІРµРґРёС‚Рµ РІРµСЃР° РІС…РѕРґРѕРІ, СЂР°Р·РґРµР»РёС‚РµР»СЊ - ';': \n");
+        bw.write("Введите веса входов, разделитель - ';': \n");
         bw.flush();
         String ws = br.readLine();
         String[] temp = ws.split(";");
@@ -15,10 +15,10 @@ public class Main {
         for (int i = 0; i < temp.length; i++) {
             w[i] = Integer.parseInt(temp[i]);
         }
-        bw.write("Р’РІРµРґРёС‚Рµ СЃРјРµС‰РµРЅРёРµ РїСЂСЏРјРѕР№ L: \n");
+        bw.write("Введите смещение прямой L: \n");
         bw.flush();
         int b = Integer.parseInt(br.readLine());
-        bw.write("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёСЏ РІС…РѕРґРѕРІ \n");
+        bw.write("Введите значения входов \n");
         bw.flush();
         String ps = br.readLine();
         temp = ps.split(";");
@@ -26,7 +26,6 @@ public class Main {
         for (int i = 0; i < temp.length; i++) {
             p[i] = Integer.parseInt(temp[i]);
         }
-        Neuron neuron = new Neuron(w, p, b);
-        neuron.divide();
+        lab1.Neuron neuron = new lab1.Neuron(w, p, b);
     }
 }
